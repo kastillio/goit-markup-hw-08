@@ -1,0 +1,39 @@
+.header {
+    background-color: $white-color;
+    border-bottom: 1px solid #ececec;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    padding: 16px 0;
+
+    .logo__span {
+        color: #000;
+    }
+
+    @include for-size(tablet) {
+        margin-right: 88px;
+        padding: 26px 0;
+    }
+
+    @include for-size(desktop) {
+        margin-right: 92px;
+        padding: 24px 0 25px;
+    }
+}
+
+.header__mobile-menu {
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    border: none;
+    background-color: inherit;
+
+    @include for-size(tablet) {
+        display: none;
+    }
+}

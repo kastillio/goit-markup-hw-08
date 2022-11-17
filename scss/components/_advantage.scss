@@ -1,0 +1,48 @@
+.advantage {
+    @include for-size(tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+}
+
+.advantage__item {
+    @include for-size(tablet) {
+        flex-basis: calc((100% - 30px) / 2);
+    }
+
+    @include for-size(desktop) {
+        flex-basis: calc((100% - 90px) / 4);
+    }
+
+    @include for-size(mobile-only) {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.advantage__icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    margin-bottom: 30px;
+    background-color: $bgr-color;
+    border-radius: 4px;
+}
+
+.advantage__title {
+    color: $titlecolor;
+    @include fontset($fw: 700, $fs: 14px, $lh: 1.14, $ls: 0.03em);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+
+    @include for-size(mobile-only) {
+        text-align: center;
+    }
+}
+
+.advantage__description {
+    @include fontset($fw: inherit, $fs: 14px, $lh: 1.71, $ls: 0.03em);
+}

@@ -1,0 +1,11 @@
+.logo {
+    display: block;
+    font-family: 'Raleway';
+    @include fontset($fw: 700, $fs: 24px, $lh: 1.1666, $ls: 0.03em);
+    color: $designcolor;
+
+    @include for-size(desktop) {
+        font-size: 26px;
+        line-height: 1.19;
+    }
+}

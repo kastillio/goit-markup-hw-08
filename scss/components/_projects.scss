@@ -1,0 +1,27 @@
+.projects {
+    @include for-size(tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+}
+
+.projects__item {
+    @include for-size(mobile-only) {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+
+    @include for-size(mobile) {
+        width: 450px;
+    }
+
+    @include for-size(tablet) {
+        flex-basis: calc((100% - 30px) / 2);
+    }
+
+    @include for-size(desktop) {
+        flex-basis: calc((100% - 60px) / 3);
+    }
+}

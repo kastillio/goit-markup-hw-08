@@ -1,0 +1,9 @@
+.navigation {
+    display: flex;
+    gap: 95px;
+    align-items: center;
+
+    @include for-size(tablet) {
+        margin-right: auto;
+    }
+}

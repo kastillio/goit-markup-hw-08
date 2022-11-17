@@ -1,0 +1,30 @@
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    width: calc(100% - 30px);
+    max-width: 450px;
+    border-radius: 4px;
+    background-color: $white-color;
+    transition: transform $transition;
+
+    @include for-size(desktop) {
+        max-width: 528px;
+    }
+}
+
+.modal__btn {
+    @extend %btn-close;
+    top: 8px;
+    right: 8px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+
+    &:hover {
+        fill: $designcolor;
+    }
+}
