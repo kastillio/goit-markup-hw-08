@@ -106,12 +106,13 @@
     border-radius: 2px;
     transition: border $transition, background-color $transition;
 
-    .send-form__checkbox:checked & {
-        background-color: $designcolor;
-        border: none;
-    }
+
 }
 
+.send-form__checkbox:checked+.send-form__icon-check {
+    background-color: $designcolor;
+    border: none;
+}
 .send-form__btn {
     @extend %btn;
     display: block;
